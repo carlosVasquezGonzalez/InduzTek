@@ -37,7 +37,6 @@ import com.example.induztek.repository.models.Cliente
 import com.example.induztek.repository.models.DireccionConCliente
 import com.example.induztek.view.utils.SelectorDesplegable
 import com.example.induztek.viewmodels.CatalogoViewModel
-import com.example.induztek.viewmodels.DireccionViewModel
 
 /** CRUD de direcciones (FK a Cliente) en una sola pantalla. */
 @Composable

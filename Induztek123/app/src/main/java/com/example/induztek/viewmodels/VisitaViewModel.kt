@@ -164,7 +164,7 @@ class VisitaViewModel(application: Application) : AndroidViewModel(application) 
         val e = _estado.value
         // Si dejó un equipo a medio llenar, se intenta agregar antes de guardar
         val pendiente = e.tipoEquipoId != 0 || e.codigoEquipo.isNotBlank() || e.tipoPruebaId != 0 ||
-            e.resultado.isNotBlank() || e.observaciones.isNotBlank()
+                e.resultado.isNotBlank() || e.observaciones.isNotBlank()
         val equipoOk = if (pendiente) agregarEquipo() else true
 
         val a = _estado.value
