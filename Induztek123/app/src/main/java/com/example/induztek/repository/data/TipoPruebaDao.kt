@@ -6,20 +6,20 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.example.induztek.repository.models.TipoUsuario
+import com.example.induztek.repository.models.TipoPrueba
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface TipoUsuarioDao {
-    @Query("SELECT * FROM tipo_usuarios ORDER BY id ASC")
-    fun getAll(): Flow<List<TipoUsuario>>
+interface TipoPruebaDao {
+    @Query("SELECT * FROM tipos_prueba ORDER BY nombre ASC")
+    fun getAll(): Flow<List<TipoPrueba>>
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
-    suspend fun insert(tipo: TipoUsuario): Long
+    suspend fun insert(item: TipoPrueba): Long
 
     @Update
-    suspend fun update(tipo: TipoUsuario)
+    suspend fun update(item: TipoPrueba)
 
     @Delete
-    suspend fun delete(tipo: TipoUsuario)
+    suspend fun delete(item: TipoPrueba)
 }
