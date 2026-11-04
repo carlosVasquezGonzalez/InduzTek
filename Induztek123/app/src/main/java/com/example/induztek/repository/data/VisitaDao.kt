@@ -12,12 +12,12 @@ import kotlinx.coroutines.flow.Flow
 
 private const val SELECT_RESUMEN =
     "SELECT v.id AS id, v.fecha AS fecha, c.nombre AS clienteNombre, d.texto AS direccionTexto, " +
-        "u.nombre AS tecnicoNombre, " +
-        "(SELECT COUNT(*) FROM equipos_prueba e WHERE e.visitaId = v.id) AS cantidadEquipos " +
-        "FROM visitas v " +
-        "INNER JOIN clientes c ON c.id = v.clienteId " +
-        "INNER JOIN direcciones d ON d.id = v.direccionId " +
-        "INNER JOIN users u ON u.id = v.tecnicoId "
+            "u.nombre AS tecnicoNombre, " +
+            "(SELECT COUNT(*) FROM equipos_prueba e WHERE e.visitaId = v.id) AS cantidadEquipos " +
+            "FROM visitas v " +
+            "INNER JOIN clientes c ON c.id = v.clienteId " +
+            "INNER JOIN direcciones d ON d.id = v.direccionId " +
+            "INNER JOIN users u ON u.id = v.tecnicoId "
 
 /** Clase abstracta (no interfaz) para poder tener un método @Transaction con cuerpo. */
 @Dao
@@ -47,11 +47,11 @@ abstract class VisitaDao {
     // READ: equipos de una visita
     @Query(
         "SELECT e.id AS id, e.codigoEquipo AS codigoEquipo, te.nombre AS tipoEquipo, tp.nombre AS tipoPrueba, " +
-            "e.resultado AS resultado, e.observaciones AS observaciones, e.imageUri AS imageUri " +
-            "FROM equipos_prueba e " +
-            "INNER JOIN tipos_equipo te ON te.id = e.tipoEquipoId " +
-            "INNER JOIN tipos_prueba tp ON tp.id = e.tipoPruebaId " +
-            "WHERE e.visitaId = :visitaId ORDER BY e.id ASC"
+                "e.resultado AS resultado, e.observaciones AS observaciones, e.imageUri AS imageUri " +
+                "FROM equipos_prueba e " +
+                "INNER JOIN tipos_equipo te ON te.id = e.tipoEquipoId " +
+                "INNER JOIN tipos_prueba tp ON tp.id = e.tipoPruebaId " +
+                "WHERE e.visitaId = :visitaId ORDER BY e.id ASC"
     )
     abstract suspend fun getEquipos(visitaId: Int): List<EquipoDetalle>
 
