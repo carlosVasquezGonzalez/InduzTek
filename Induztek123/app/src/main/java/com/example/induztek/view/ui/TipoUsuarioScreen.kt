@@ -33,6 +33,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.induztek.repository.models.TipoUsuario
+import com.example.induztek.viewmodels.TipoUsuarioViewModel
+import androidx.compose.foundation.lazy.items
 
 /** CRUD de tipos de usuario en una sola pantalla (formulario arriba, lista abajo). */
 @Composable

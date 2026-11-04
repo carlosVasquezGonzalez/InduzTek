@@ -31,6 +31,8 @@ import com.example.induztek.view.utils.AnimacionEntradaFormulario
 import com.example.induztek.view.utils.CameraCapture
 import com.example.induztek.view.utils.PhotoBox
 import com.example.induztek.view.utils.SelectorDesplegable
+import com.example.induztek.viewmodels.TipoUsuarioViewModel
+import com.example.induztek.viewmodels.UserViewModel
 
 @Composable
 fun UserFormScreen(

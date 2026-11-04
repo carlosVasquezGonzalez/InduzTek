@@ -39,6 +39,9 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import com.example.induztek.repository.models.User
+import com.example.induztek.viewmodels.TipoUsuarioViewModel
+import com.example.induztek.viewmodels.UserViewModel
+import androidx.compose.foundation.lazy.items
 
 @Composable
 fun UserListScreen(

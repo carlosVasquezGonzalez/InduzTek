@@ -64,9 +64,12 @@ import com.example.induztek.view.utils.navExitTransition
 import com.example.induztek.view.utils.navPopEnterTransition
 import com.example.induztek.view.utils.navPopExitTransition
 import com.example.induztek.viewmodels.ClienteViewModel
+import com.example.induztek.viewmodels.DireccionViewModel
 import com.example.induztek.viewmodels.LoginViewModel
 import com.example.induztek.viewmodels.TipoEquipoViewModel
 import com.example.induztek.viewmodels.TipoPruebaViewModel
+import com.example.induztek.viewmodels.TipoUsuarioViewModel
+import com.example.induztek.viewmodels.UserViewModel
 import com.example.induztek.viewmodels.VisitaViewModel
 import kotlinx.coroutines.launch
 

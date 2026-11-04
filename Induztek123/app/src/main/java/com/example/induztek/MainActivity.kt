@@ -8,9 +8,12 @@ import androidx.activity.viewModels
 import com.example.induztek.navegations.AppNavigation
 import com.example.induztek.view.theme.InduztekTheme
 import com.example.induztek.viewmodels.ClienteViewModel
+import com.example.induztek.viewmodels.DireccionViewModel
 import com.example.induztek.viewmodels.LoginViewModel
 import com.example.induztek.viewmodels.TipoEquipoViewModel
 import com.example.induztek.viewmodels.TipoPruebaViewModel
+import com.example.induztek.viewmodels.TipoUsuarioViewModel
+import com.example.induztek.viewmodels.UserViewModel
 import com.example.induztek.viewmodels.VisitaViewModel
 
 class MainActivity : ComponentActivity() {
